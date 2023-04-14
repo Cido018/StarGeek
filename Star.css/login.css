@@ -1,104 +1,448 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root {
-    --preto: #252525
-    --
+:root{
+    --roxo: rgba(234, 255, 47, 0.6);
+    --fundo: linear-gradient(237.94deg, #393920 20.01%, #000000 100%);
+    --botao: linear-gradient(180deg, #000000 0%, #ffe100 100%);
 }
-body {
-    background-image: linear-gradient(to right, rgb(0, 0, 0), rgba(255, 247, 0, 0.781));
+header{
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+}
+header > div >a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+header > div > input {
+    padding-left: 10px;
+    background: rgba(226, 226, 226, 0.9);
+    border-radius: 10px;
+    height: 40px;
+    font-size: 15px;
+    box-shadow: 2px -2px 10px rgb(248, 255, 125);
+    border: none;
+}
+body{
+    text-align: center;
+    background: var(--fundo);
+    padding: 60px;
+}
+img{
+    margin-bottom: 40px;
+    width: 200px;
+    height: 150px;
+    background-repeat: no-repeat;
+}
+.principal{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    height: 450px;
+    margin: 0 auto;
+    box-shadow: 5px -5px 10px black;
+    display: flex;
     flex-direction: column;
+    max-width: 400px;
 }
-.ri > img {
-    width: 150px;
+.segunda > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+    color: white;
+    text-shadow: 2px -2px 10px white;
 }
-header {
-    display: flex;
-    flex-wrap: wrap;
-}
-.ri {
-    display: flex;
-    flex-wrap: wrap;
-}
-.log {
+.log{
+    margin: 20px;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    border: 1px solid yellow;
-    width: 900px;
-    height: 850px;
-    margin-top: 10px;
-    border-radius: 50px;
-    background-color: black;
-    opacity: 0.5;
-    align-items: center;
+    max-width: 250px;
+    margin: auto;
+}
+.log > input{
+    padding-left: 10px;
+    background: rgba(226, 226, 226, 0.9);
+    border-radius: 12px;
+    height: 60px;
+    font-size: 15px;
+    box-shadow: 2px -2px 10px white;
+    border: none;
+}
+.log > a{
+    background: var(--botao);
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    padding: 15px 90px;
+    transition: 500ms;
+    text-shadow: 1px -1px 5px black;
+}
+.log > a:hover{
+    padding: 12px 60px;
+    font-size: 25px;
+    transition: 500ms;
+    text-shadow: 1px -1px 5px rgb(0, 0, 0);
+}
+.senha > input{
+    padding-left: 10px;
+    background: rgba(226, 226, 226, 0.9);
+    border-radius: 12px;
+    height: 60px;
+    font-size: 15px;
+    box-shadow: 2px -2px 10px white;
+    border: none;
+}
+.senha{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    margin: 20px auto;
+}
+.senha > a{
+    text-decoration: none;
+    color: white;
+}
+.cad > a{
+    background: var(--botao);
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    padding: 15px 70px;
+    transition: 500ms;
+    text-shadow: 1px -1px 5px black;
+    box-shadow: 2px -2px 10px black;
+}
+.cad > a:hover{
+    padding: 12px 60px;
+    font-size: 25px;
+    text-shadow: 1px -1px 5px black;
+    transition: 500ms;
+    box-shadow: 2px -2px 10px black;
+}
+.cad{
+    text-align: center;
+    margin-top: 50px;
+}
+.cadastro > h2{
+    color: white;
+}
+.bao{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+}
+
+.tim{
+    margin-top: 60px;
+}
+.tim > a{
+    background: var(--botao);
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    padding: 15px 70px;
+    transition: 500ms;
+    text-shadow: 1px -1px 5px black;
+    box-shadow: 2px -2px 10px black;
+}
+.tim > a:hover{
+    padding: 12px 60px;
+    font-size: 25px;
+    text-shadow: 1px -1px 5px black;
+    transition: 500ms;
+    box-shadow: 2px -2px 10px black;
+}
+.termo > h2{
+    color: white;
+    font-family:'Courier New', Courier, monospace;
 }
 nav {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-.log > h1 {
-    color: yellow;
-    font-family: 'Anton', sans-serif;
-    font-size: 35px;
-
-}
-.write > h2 {
-    color: yellow;
-    text-shadow: 1px 0px white;
-    margin: 30px;
-}
-.write {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     justify-content: space-between;
-    padding: -100px;
-    height: 500px;
-    width: 300px;
+    
 }
-.write > input {
-    border: hidden;
-    width: 100px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: black;
+nav > div {
+    color: rgb(118, 118, 55);
+   font-size: 40px;
+    
 }
-.write > a {
-    text-decoration: none;
-    color: blue;
+nav > pa {
+    text-align: center;
+    font-size: 60px;
 }
-.write > a:hover {
-    color: rgb(83, 83, 255);
-    margin: 30px;
+nav > ab {
+    text-align: center;
+    color: white;
+    font-size: 30px;
 }
-.but {
+.menu {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
 }
-
-.but > a{
+.menu > li {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+}
+.menu > li > a {
+    color: aliceblue;
     text-decoration: none;
-    border: 1px solid yellow;
-    color: yellow;
+    text-shadow: 2px 2px solid black;
+    font-weight: 300px;
+    margin-right: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 10px;
-    border-radius: 5px;
-    font-size: 20px;
-    font-family: sans-serif;
-    transition: 100ms;
-    padding-top: 10px;
-    margin: 30px;
 }
-.but a:hover {
-    background-color: rgb(0, 0, 0);
-    font-size: 25px;
-    transition: 100ms;
+.menu > li:hover {
+    background-color: rgb(28, 28, 22);
+}
+.menu > input {
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: white;
+    margin-top: 75px;
+    color: rgb(0, 0, 0);
+    border-radius: 12px;
+    height: 60px;
+    font-size: 15px;
+    transition: 500px;
+    box-shadow: 2px -2px 10px white;
+    border: none;
+}
+.menu > input:focus{
+    color: white;
+    background-color: black;
+    transition: 500ms;
+}
+.bao > input {
+  
+    background-color: white;
+    margin-top: 75px;
+    color: rgb(0, 0, 0);
+    border-radius: 12px;
+    height: 60px;
+    font-size: 15px;
+    transition: 500px;
+    box-shadow: 2px -2px 10px white;
+    border: none;
+}
+.bao > input:focus{
+    color: white;
+    background-color: black;
+    transition: 500ms;
+}
+.menu > li > img {
+    border-radius: 90px;
+    width: 100px;
+    height: 100px;
+    margin-top: 45px;
+}
+.scc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+}
+.ops > img {
+     margin-right: 20px;
+     height: 200px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px var(--roxo);
+}
+.tio {
+    color: white;
+    max-width: 50%;
+    text-shadow: 1px 2px 1px var(--roxo);
+}
+.tio > h2 {
+    text-decoration: underline var(--roxo);
+    font-size: 30px;
+}
+.tio > p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+.rr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+}
+.ye {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+}
+
+main {
+    justify-content: space-between;
+}
+.ti {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+}
+.ti > h1 {
+    text-decoration: underline var(--roxo);
+    font-size: 80px;
+    color: aliceblue;
+}
+.bor {
+   align-items: start;
+   text-align: left;
+}
+.bor > p {
+    color: aliceblue;
+    text-decoration:underline var(--roxo);
+    font-size: 50px;
+}
+.ty {
+    display: flex;
+    border-radius: 20px;
+    border: 2px solid yellow;
+}
+.ima > img {
+    width: 100%;
+    height: 80%;
+    border-radius: 40px;
+    border: 2px solid black;
+}
+.Rodape {
+    background-color: var(--fundo);
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    box-shadow: 0px -3px 10px yellow;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.endereco > ul > li {
+    list-style: none;
+}
+.endereco > ul > li > a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+.social > ul > li {
+    list-style: none;
+}
+.social > ul > li > a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+.sabores{
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.sabor{
+    margin: 10px;
+    background:linear-gradient(to top, rgb(49, 51, 30),#353a19)border-box;
+    max-width: 250px;
+    min-width: 250px;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 20px;
+}
+@media (max-width:500px) {
+    .sabores{
+        flex-direction: row;
+        margin: 10px;
+    }
+    .sabor{
+        min-width: 100%;
+    }
+}
+.sabor > img{
+    width: 100%;
+    border-radius: 20px;
+}
+.nome {
+    justify-content: center;
+    text-align: center;
+}
+.nome > a {
+    color: white;
+    text-shadow: 2px 2px 3px rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: none;
+    justify-content: center;
+}
+.nome > a:hover {
+    color: #000000;
+    transition: 300ms;
+}
+.preco {
+    margin: 10px;
+    background-color: rgb(103, 103, 57);
+    border-radius: 10px;
+    border: 1px;
+    padding: 7px;
+    box-shadow: 1px 1px 5px black;
+}
+.promocoes {
+    display: flex;
+    overflow: scroll;
+}
+.promocoes::-webkit-scrollbar {
+    display: none;
+}
+h2 {
+    color: aliceblue;
+    text-decoration: underline var(--roxo);
+    font-size: 60px;
+    justify-content: start;
+    text-align: left;
+}
+.ihu{
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.fy{
+    margin: 30px;
+    background:linear-gradient(to top, rgb(49, 51, 30),#353a19)border-box;
+    max-width: 220px;
+    min-width: 220px;
+    box-shadow: 1px 1px 5px black;
+    border-radius: 100px;
+}
+@media (max-width:500px) {
+    .ihu{
+        flex-direction: row;
+        margin: 10px;
+    }
+    .fy{
+        min-width: 100%;
+    }
+}
+.fy > img{
+    width: 105%;
+    border-radius: 200px;
+    height:105%;
+}
+.para > p {
+    font-size: 50px;
+    color: white;
+    text-decoration: underline var(--roxo);
+}
+.fy > a {
+    text-decoration: none;
+    color: aliceblue;
 }
